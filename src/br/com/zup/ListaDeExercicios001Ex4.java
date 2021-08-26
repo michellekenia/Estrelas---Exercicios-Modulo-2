@@ -25,7 +25,5 @@ public class ListaDeExercicios001Ex4 {
         //Dando print
         System.out.println("Salário do mês : " +salarioDoMes + "R$");
 
-
-
     }
 }
