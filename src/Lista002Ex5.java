@@ -7,7 +7,7 @@ public class Lista002Ex5 {
 
         Scanner leitor = new Scanner(System.in);
 
-        // Mensagem para o usuário
+        //Mensagem para o usuário
 
         System.out.println("Olá! Digite um número de 1 a 7 para saber o dia da semana correspondente. ");
         int diaDaSemana = leitor.nextInt();
