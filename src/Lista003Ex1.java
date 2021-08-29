@@ -15,7 +15,7 @@ public class Lista003Ex1 {
         out.println ("Por favor, digite quantas horas você trabalha por mês:  ");
         double horasTrabalhadas = leitor.nextDouble();
 
-        //Variáveis
+        //Criando as variáveis
         double salarioBruto = horaDeTrabalho * horasTrabalhadas;
         double descontoIR = 0;
         double descontoINSS = 0;
@@ -23,7 +23,7 @@ public class Lista003Ex1 {
         double valorDescontos = 0;
         double salarioLiquido = 0;
 
-        //Condições
+        //Criando as condições
         if (salarioBruto > 0) {
 
             if (salarioBruto <= 900) {
@@ -51,16 +51,17 @@ public class Lista003Ex1 {
             valorDescontos = (descontoINSS*salarioBruto + descontoIR*salarioBruto);
             salarioLiquido = salarioBruto - (valorDescontos);
 
+            //Variáveis para incluir a porcentagem no print
             double valorEmPorcentagemDoIR = (descontoIR * 100);
             double valorEmPorcentagemINSS = (descontoINSS * 100);
             double valorEmPorcentagemFGTS = (valorFGTS * 100);
 
-            System.out.println(" Salário Bruto: " +  "("  + (horaDeTrabalho) + "*" + (horasTrabalhadas) +  ") :  R$ " + salarioBruto);
-            System.out.println(" (-) IR" + "(" + valorEmPorcentagemDoIR + " %) :  R$ " + descontoIR*salarioBruto);
-            System.out.println(" (-) INSS" + "(" + valorEmPorcentagemINSS + " %) :  R$ " + descontoINSS*salarioBruto);
-            System.out.println(" FGTS" + "(" + valorEmPorcentagemFGTS + " %) :  R$ " + valorFGTS*salarioBruto);
-            System.out.println(" Total de descontos :  R$ " + valorDescontos);
-            System.out.println(" Salário Líquido :  R$ " + salarioLiquido);
+            System.out.println(" Salário Bruto: " +  "("  + (horaDeTrabalho) + "*" + (horasTrabalhadas) +  "): R$ " + salarioBruto);
+            System.out.println(" (-) IR" + "(" + valorEmPorcentagemDoIR + " %)             : R$ " + descontoIR*salarioBruto);
+            System.out.println(" (-) INSS" + "(" + valorEmPorcentagemINSS + " %)          : R$ " + descontoINSS*salarioBruto);
+            System.out.println(" FGTS" + "(" + valorEmPorcentagemFGTS + " %)              : R$ " + valorFGTS*salarioBruto);
+            System.out.println(" Total de descontos        : R$ " + valorDescontos);
+            System.out.println(" Salário Líquido           : R$ " + salarioLiquido);
         }
          else {System.out.println("Digite um número maior do que 0. ");
 
