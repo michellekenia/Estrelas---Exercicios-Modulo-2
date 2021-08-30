@@ -37,42 +37,43 @@ public class Lista003Ex2 {
 
         //Criando as condições e printando as mensagens dos valores dos combustíveis
 
-        if (nomeCombustivel.equals ("A") | nomeCombustivel.equals("a")) {
+        if (nomeCombustivel.equals("A") | nomeCombustivel.equals("a")) {
             if (quantidadeL > 0 & quantidadeL <= 20) {
 
-                desconto3 = tresPorcento* precoA;
+                desconto3 = tresPorcento * precoA;
                 descontoTotal = desconto3 * quantidadeL;
-                valorSemDesconto = quantidadeL*precoA;
+                valorSemDesconto = quantidadeL * precoA;
                 valorComDesconto = valorSemDesconto - descontoTotal;
 
-                out.println( "Valor a pagar: R$ " + valorComDesconto);
+                out.println("Valor a pagar: R$ " + valorComDesconto);
 
             } else {
 
                 desconto5 = cincoPorcento * precoA;
                 descontoTotal = desconto5 * quantidadeL;
-                valorSemDesconto = quantidadeL*precoA;
+                valorSemDesconto = quantidadeL * precoA;
                 valorComDesconto = valorSemDesconto - descontoTotal;
 
-                out.println( "Valor a pagar: R$ " + valorComDesconto);
+                out.println("Valor a pagar: R$ " + valorComDesconto);
             }
         } else if (nomeCombustivel.equals("G") | nomeCombustivel.equals("g")) {
 
-                if (quantidadeL > 0 & quantidadeL <= 20) {
-                    desconto4 = quatroPorcento * precoG;
-                    descontoTotal = desconto4 * quantidadeL;
-                    valorSemDesconto = quantidadeL*precoG;
-                    valorComDesconto = valorSemDesconto - descontoTotal;
+            if (quantidadeL > 0 & quantidadeL <= 20) {
+                desconto4 = quatroPorcento * precoG;
+                descontoTotal = desconto4 * quantidadeL;
+                valorSemDesconto = quantidadeL * precoG;
+                valorComDesconto = valorSemDesconto - descontoTotal;
 
-                    out.println( "Valor a pagar: R$ " + valorComDesconto);
+                out.println("Valor a pagar: R$ " + valorComDesconto);
 
-                } else {
-                    desconto4 = seisPorcento * precoG;
-                    descontoTotal = desconto6 * quantidadeL;
-                    valorSemDesconto = quantidadeL*precoG;
-                    valorComDesconto = valorSemDesconto - descontoTotal; }
+            } else {
+                desconto4 = seisPorcento * precoG;
+                descontoTotal = desconto6 * quantidadeL;
+                valorSemDesconto = quantidadeL * precoG;
+                valorComDesconto = valorSemDesconto - descontoTotal;
+            }
 
-                    out.println( "Valor a pagar: R$ " + valorComDesconto);
+            out.println("Valor a pagar: R$ " + valorComDesconto);
 
         } else {
             out.println("Digite um tipo válido de combustível.");
