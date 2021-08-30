@@ -14,6 +14,7 @@ public class Lista003Ex2 {
 
         out.println("Qual é o tipo do combustível ? Sendo A - Álcool e G - Gasolina.");
         String nomeCombustivel = leitor.nextLine();
+
         out.println("Quantos litros? ");
         double quantidadeL = leitor.nextDouble();
 
@@ -33,7 +34,6 @@ public class Lista003Ex2 {
         double desconto4 = 0;
         double desconto5 = 0;
         double desconto6 = 0;
-
 
         //Criando as condições e printando as mensagens dos valores dos combustíveis
 
@@ -75,7 +75,7 @@ public class Lista003Ex2 {
                     out.println( "Valor a pagar: R$ " + valorComDesconto);
 
         } else {
-            out.println("Digite um tipo válido de combustível");
+            out.println("Digite um tipo válido de combustível.");
         }
     }
 }
