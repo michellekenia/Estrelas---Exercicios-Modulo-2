@@ -9,6 +9,7 @@ public class Lista004Ex1 {
 
         System.out.println("Números de 1 a 100 :");
 
+        // Acrescentar
         int contador = 1;
         while (contador <= 100) {
             System.out.println(contador);
