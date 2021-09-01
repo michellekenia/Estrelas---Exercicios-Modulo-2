@@ -1,2 +1,2 @@
-public class Lista006Ex1 {
+public class Lista007Ex1 {
 }
