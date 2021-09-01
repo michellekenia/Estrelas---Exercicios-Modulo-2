@@ -34,24 +34,22 @@ public class Lista005ExtraSupremo {
                 menorValor = valorDigitado;
                 maiorValor = valorDigitado;
 
-                else (valorDigitado <= menorValor); {
-                    if ()
-
-
+            } else {
+                    if (valorDigitado <= menorValor) {
+                        menorValor = valorDigitado;
+                    }
+                    if (valorDigitado >= maiorValor) {
+                        maiorValor = valorDigitado;
+                    }
                 }
 
-
-            }
-
             somaDosValores = somaDosValores + valorDigitado;
-
             contador++;
         }
 
-        System.out.println(" O menor valor digitado é : " + menorValor);
+        System.out.println("O menor valor digitado é : " + menorValor);
         System.out.println("O maior valor digitado é : " + maiorValor);
         System.out.println("A soma dos números digitados é : " + somaDosValores);
-
 
     }
 
