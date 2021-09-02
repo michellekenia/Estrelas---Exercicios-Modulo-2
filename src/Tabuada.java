@@ -14,22 +14,29 @@ public class Tabuada {
         int multiplicador = 0;
 
         System.out.println("Digite o número que deseja saber a tabuada: ");
+        numeroDigitado = leitor.nextInt();
+
+
+        /*
+        if (numeroDigitado <1 || numeroDigitado >10) {
+            System.out.println("Número digitado é inválido");
+            return;
+        }
+        */
+
+        while (numeroDigitado <1 || numeroDigitado >10) {
+            System.out.println("Digite um número inteiro de 1 a 10");
+            numeroDigitado = leitor.nextInt();
+        }
+
+        System.out.println("Tabuada do " + numeroDigitado + ":");
 
         while (contador <= numeroMaximo) {
-            numeroDigitado = leitor.nextInt();
+            multiplicador = numeroDigitado * contador;
 
-            System.out.println("Tabuada do " + numeroDigitado + ":");
-
-            while (contador <= numeroMaximo) {
-                multiplicador = numeroDigitado * contador;
-
-                System.out.println(numeroDigitado + " x " + contador + " = " + multiplicador);
-
-                contador++;
-            }
+            System.out.println(numeroDigitado + " x " + contador + " = " + multiplicador);
 
             contador++;
-
         }
 
 
