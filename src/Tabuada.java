@@ -4,7 +4,7 @@ a tabuada */
 
 import java.util.Scanner;
 
-public class Lista006Ex3 {
+public class Tabuada {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
