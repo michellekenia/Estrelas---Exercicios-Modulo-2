@@ -16,13 +16,15 @@ public class Exercicio4 {
         if (numeroDigitado <= 1) {
             System.out.println("Não é número primo.");
         }
-        else if (numeroDigitado <= 3) {
+
+        //Não tem necessidade dessa condição.
+        /*else if (numeroDigitado == 2) {
             System.out.println("É um número primo.");
-        }
+        }*/
 
         else {
 
-            for (int divisor = 3; divisor < numeroDigitado; divisor++) {
+            for (int divisor = 2; divisor < numeroDigitado; divisor++) {
 
                 if (numeroDigitado % divisor == 0) {
                     numeroPrimo = 0;
