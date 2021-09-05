@@ -18,7 +18,8 @@ public class Exercicio12 {
             numerosInteiros.add(leitor.nextInt());
         }
 
-        int soma = (numerosInteiros.get(0) + numerosInteiros.get(1) + numerosInteiros.get(2)
+
+        int soma = numerosInteiros.get(0) + numerosInteiros.get(1) + numerosInteiros.get(2)
                 + numerosInteiros.get(3) + numerosInteiros.get(4);
 
         int multiplicação = numerosInteiros.get(0) * numerosInteiros.get(1) * numerosInteiros.get(2)
