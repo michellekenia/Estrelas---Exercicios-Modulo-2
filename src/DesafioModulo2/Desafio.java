@@ -15,16 +15,16 @@ public class Desafio {
 
         System.out.println("Para cadastrar um novo funcionário insira os dados solicitados.");
 
-        System.out.print("Insira o CPF do funcionário: ");
+        System.out.println("Digite o CPF: ");
         String chave = leitor.nextLine();
 
-        System.out.print("Insira o nome do funcionário: ");
+        System.out.println("Digite o nome: ");
         String nome = leitor.nextLine();
 
-        System.out.print("Insira o telefone do funcionário: ");
+        System.out.println("Digite o telefone: ");
         String telefone = leitor.nextLine();
 
-        System.out.print("Insira o e-mail do funcionário: ");
+        System.out.println("Digite o e-mail: ");
         String eMail = leitor.nextLine();
 
         String valor = nome + "," + telefone + "," + eMail;
@@ -32,8 +32,34 @@ public class Desafio {
         //Adicionando a chave e o valor na lista de funcionários
         listaDeFuncionarios.put(chave, valor);
 
-        System.out.println("Essa é a lista de funcinários cadastrados: " + listaDeFuncionarios);
+        //Criando uma variável e mensagem para saber o que o usuário deseja fazer.
+        System.out.println("Digite 1 para adicionar mais funcinários, 2 Para mostrar a lista dos funcionários ou 3 para encerrar o programa.");
+        Integer resposta = leitor.nextInt();
 
+        //Criando uma estrutura de repetição para realizar o que o usuário deseja fazer.
+
+        if (resposta == 1) {
+
+            System.out.println("Digite o CPF: ");
+            chave = leitor.nextLine();
+
+            System.out.println("Digite o nome do funcionário: ");
+            nome = leitor.nextLine();
+
+            System.out.println("Digite o telefone do funcionário: ");
+            telefone = leitor.nextLine();
+
+            System.out.println("Digite o e-mail do funcionário: ");
+            eMail = leitor.nextLine();
+
+        } else if (resposta == 2) {
+            System.out.println("Essa é a lista de funcinários cadastrados: " + listaDeFuncionarios);
+
+        } else if (resposta == 3) {
+            return;
+        }
+
+        //System.out.println("Essa é a lista de funcinários cadastrados: " + listaDeFuncionarios);
 
     }
 }
