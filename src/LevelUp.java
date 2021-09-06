@@ -91,7 +91,7 @@ public class LevelUp {
         System.out.println("Dados da lista de alunos: " + listaDeAlunos);
 
         //
-        System.out.print("Deseja excluir algum aluno? (sim/não): ");
+        System.out.print("Deseja excluir algum aluno? (sim/não)");
         String exclusao = leitor.nextLine();
 
         if (exclusao.equals("sim")) {
