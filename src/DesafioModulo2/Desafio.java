@@ -32,26 +32,36 @@ public class Desafio {
             leitor.nextLine();
 
             // Incluir os dados de cadastramento.
-
-
-
             if (resposta == 1) {
                 System.out.println("Digite o CPF: ");
                 String chave = leitor.nextLine();
 
-                System.out.println("Digite o nome: ");
-                String nome = leitor.nextLine();
+                // Verificar se o CPF digitado já está no cadastro.
+                for (String verificação : listaDeFuncionarios.keySet()) {
+                    if (chave.equals(verificação)) {
+                        repetido = 1;
+                    }
+                }
 
-                System.out.println("Digite o telefone: ");
-                String telefone = leitor.nextLine();
+                if (repetido == 1) {
+                    System.out.println("Este CPF já foi cadastrado.");
 
-                System.out.println("Digite o e-mail: ");
-                String eMail = leitor.nextLine();
+                } else {
 
-                String valor = nome + "," + telefone + "," + eMail;
+                    System.out.println("Digite o nome: ");
+                    String nome = leitor.nextLine();
 
-                // Adicionar a chave e o valor na lista.
-                listaDeFuncionarios.put(chave, valor);
+                    System.out.println("Digite o telefone: ");
+                    String telefone = leitor.nextLine();
+
+                    System.out.println("Digite o e-mail: ");
+                    String eMail = leitor.nextLine();
+
+                    String valor = nome + "," + telefone + "," + eMail;
+
+                    // Adicionar a chave e o valor na lista.
+                    listaDeFuncionarios.put(chave, valor);
+                }
 
 
                 // Mostrar a lista de funcionários.
@@ -63,15 +73,16 @@ public class Desafio {
             } else if (resposta == 3) {
                 return;
 
-                // Mensagem para números inválidos no menu.
-            } else if (resposta != 1 && resposta != 2 && resposta != 3 && resposta != 4) {
-                System.out.println("Por favor, escolha um dos números disponíveis no menu.");
-
+                // Excluir um funcionário da lista a partir da chave CPF.
             } else if (resposta == 4) {
                 System.out.println("Digite o CPF do colaborador que deseja excluir do cadastro: ");
                 String exclusao = leitor.nextLine();
 
                 listaDeFuncionarios.remove(exclusao);
+
+                // Mensagem para números inválidos no menu.
+            } else if (resposta != 1 && resposta != 2 && resposta != 3 && resposta != 4) {
+                System.out.println("Por favor, escolha um dos números disponíveis no menu.");
 
             }
 
