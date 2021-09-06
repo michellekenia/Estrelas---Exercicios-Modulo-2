@@ -10,21 +10,25 @@ public class Desafio {
         // Iniciando Scanner e a estrutura HashMap.
         Scanner leitor = new Scanner(System.in);
         Map<String, String> listaDeFuncionarios = new HashMap<String, String>();
+
+        // Usando o tipo boolean para criar o menu.
+        // A variáveil tipo int armazena a resposta do leitor no menu.
+        boolean iniciar = true;
+        int resposta = 0;
+
         System.out.println("Bem vinde, você está no Sistema De Inclusão De Colaboradores.");
 
-        //Criando o menu para o usuário.
-        System.out.println("Digite 1 para incluir um colaborador.");
-        System.out.println("Digite 2 para mostrar a lista de colaboradores cadastrados.");
-        System.out.println("Digite 3 para sair do sistema.");
+        // Criar o menu para o usuário.
+        while (iniciar = true) {
+            System.out.println("Digite 1 para incluir um colaborador.");
+            System.out.println("Digite 2 para mostrar a lista de colaboradores cadastrados.");
+            System.out.println("Digite 3 para sair do sistema.");
 
-        int resposta = leitor.nextInt();
-        leitor.nextLine();
+            // Ler a resposta do usuário referente ao menu.
+            resposta = leitor.nextInt();
+            leitor.nextLine();
 
-        //Criando uma condição para realizar o que o usuário deseja fazer.
-
-        int i = 0;
-
-        while ( i == 0 ) {
+            // Incluir os dados de cadastramento.
             if (resposta == 1) {
                 System.out.println("Digite o CPF: ");
                 String chave = leitor.nextLine();
@@ -40,24 +44,26 @@ public class Desafio {
 
                 String valor = nome + "," + telefone + "," + eMail;
 
-                // Adicionando a chave e o valor na lista de funcionários.
+                // Adicionar a chave e o valor na lista.
                 listaDeFuncionarios.put(chave, valor);
 
-                System.out.println("Digite 1 para incluir um colaborador.");
-                System.out.println("Digite 2 para mostrar a lista de colaboradores cadastrados.");
-                System.out.println("Digite 3 para sair do sistema.");
 
-                resposta = leitor.nextInt();
-                leitor.nextLine();
-
+                // Mostrar a lista de funcionários.
             } else if (resposta == 2) {
+
                 System.out.println("Essa é a lista de colaboradores cadastrados: " + listaDeFuncionarios);
 
+                // Finalizar o programa.
             } else if (resposta == 3) {
-
                 return;
-            }
-        }
 
+                // Mensagem para números inválidos no menu.
+            } else if (resposta != 1 && resposta != 2 && resposta != 3) {
+                System.out.println("Por favor, escolha um dos números disponíveis no menu.");
+
+            }
+
+        }
     }
+
 }
