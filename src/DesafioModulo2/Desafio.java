@@ -7,59 +7,57 @@ import java.util.Scanner;
 public class Desafio {
     public static void main(String[] args) {
 
-        //Iniciando Scanner e a estrutura HashMap
+        // Iniciando Scanner e a estrutura HashMap.
         Scanner leitor = new Scanner(System.in);
         Map<String, String> listaDeFuncionarios = new HashMap<String, String>();
+        System.out.println("Bem vinde, você está no Sistema De Inclusão De Colaboradores.");
 
-        //Criando as variáveis e as mensagens necessárias para a chave e para cada um dos valores.
+        //Criando o menu para o usuário.
+        System.out.println("Digite 1 para incluir um colaborador.");
+        System.out.println("Digite 2 para mostrar a lista de colaboradores cadastrados.");
+        System.out.println("Digite 3 para sair do sistema.");
 
-        System.out.println("Para cadastrar um novo funcionário insira os dados solicitados.");
+        int resposta = leitor.nextInt();
+        leitor.nextLine();
 
-        System.out.println("Digite o CPF: ");
-        String chave = leitor.nextLine();
+        //Criando uma condição para realizar o que o usuário deseja fazer.
 
-        System.out.println("Digite o nome: ");
-        String nome = leitor.nextLine();
+        int i = 0;
 
-        System.out.println("Digite o telefone: ");
-        String telefone = leitor.nextLine();
+        while ( i == 0 ) {
+            if (resposta == 1) {
+                System.out.println("Digite o CPF: ");
+                String chave = leitor.nextLine();
 
-        System.out.println("Digite o e-mail: ");
-        String eMail = leitor.nextLine();
+                System.out.println("Digite o nome: ");
+                String nome = leitor.nextLine();
 
-        String valor = nome + "," + telefone + "," + eMail;
+                System.out.println("Digite o telefone: ");
+                String telefone = leitor.nextLine();
 
-        //Adicionando a chave e o valor na lista de funcionários
-        listaDeFuncionarios.put(chave, valor);
+                System.out.println("Digite o e-mail: ");
+                String eMail = leitor.nextLine();
 
-        //Criando uma variável e mensagem para saber o que o usuário deseja fazer.
-        System.out.println("Digite 1 para adicionar mais funcinários, 2 Para mostrar a lista dos funcionários ou 3 para encerrar o programa.");
-        Integer resposta = leitor.nextInt();
+                String valor = nome + "," + telefone + "," + eMail;
 
-        //Criando uma estrutura de repetição para realizar o que o usuário deseja fazer.
+                // Adicionando a chave e o valor na lista de funcionários.
+                listaDeFuncionarios.put(chave, valor);
 
-        if (resposta == 1) {
+                System.out.println("Digite 1 para incluir um colaborador.");
+                System.out.println("Digite 2 para mostrar a lista de colaboradores cadastrados.");
+                System.out.println("Digite 3 para sair do sistema.");
 
-            System.out.println("Digite o CPF: ");
-            chave = leitor.nextLine();
+                resposta = leitor.nextInt();
+                leitor.nextLine();
 
-            System.out.println("Digite o nome do funcionário: ");
-            nome = leitor.nextLine();
+            } else if (resposta == 2) {
+                System.out.println("Essa é a lista de colaboradores cadastrados: " + listaDeFuncionarios);
 
-            System.out.println("Digite o telefone do funcionário: ");
-            telefone = leitor.nextLine();
+            } else if (resposta == 3) {
 
-            System.out.println("Digite o e-mail do funcionário: ");
-            eMail = leitor.nextLine();
-
-        } else if (resposta == 2) {
-            System.out.println("Essa é a lista de funcinários cadastrados: " + listaDeFuncionarios);
-
-        } else if (resposta == 3) {
-            return;
+                return;
+            }
         }
-
-        //System.out.println("Essa é a lista de funcinários cadastrados: " + listaDeFuncionarios);
 
     }
 }
