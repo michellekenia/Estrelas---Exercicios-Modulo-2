@@ -34,6 +34,13 @@ public class ListaDeProdutos {
             } else if (resposta == 2) {
                 System.out.println("Essa é a lista de produtos cadastrados: " + ListaDeProdutos);
 
+            } else if (resposta == 3) {
+                System.out.print("Digite o nome do produto que deseja excluir: ");
+                String excluir = leitor.nextLine();
+
+                ListaDeProdutos.remove(excluir);
+
+
             }
         }
 
